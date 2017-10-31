@@ -8,15 +8,33 @@
   <script src='./assests/calendar/lib/jquery.min.js'></script>
   <script src='./assests/calendar/lib/moment.min.js'></script>
   <script src='./assests/calendar/fullcalendar.js'></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
 
 </head>
 <body>
+  <script>
+      // Initialize Firebase
+  var config = {
+        apiKey: "AIzaSyBlVKzd01CFll4MR5GTwaLs98Jzuil8ZeU",
+        authDomain: "birthdaystalker-e466a.firebaseapp.com",
+        databaseURL: "https://birthdaystalker-e466a.firebaseio.com",
+        projectId: "birthdaystalker-e466a",
+        storageBucket: "birthdaystalker-e466a.appspot.com",
+        messagingSenderId: "572508190232"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+<!-- start HTML  -->
+
+
   <h1>Birthday Stalker Calendar!</h1>
 
 
   <div id="calendar"></div>
 
   <script>
+  //code below calls the calendar from the calendar folder
   $(document).ready(function() {
     // page is now ready, initialize the calendar...
 
