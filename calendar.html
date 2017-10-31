@@ -3,15 +3,40 @@
 <html>
 
 <head>
-	<title>Bithday Stalker</title>
-</head>
+	<title>Calendar</title>
+  <link rel='stylesheet' href='./assests/calendar/fullcalendar.css' />
+  <script src='./assests/calendar/lib/jquery.min.js'></script>
+  <script src='./assests/calendar/lib/moment.min.js'></script>
+  <script src='./assests/calendar/fullcalendar.js'></script>
 
+</head>
 <body>
-	
-	
-	
-	
+  <h1>Birthday Stalker Calendar!</h1>
+
+
+  <div id="calendar"></div>
+
+  <script>
+  $(document).ready(function() {
+    // page is now ready, initialize the calendar...
+
+    // $('#calendar').fullCalendar({
+    //   // put your options and callbacks here
+    // })
+
+    $('#calendar').fullCalendar({
+      dayClick: function() {
+          alert('a day has been clicked!');
+      }
+  });
+
+  });
+  </script>
+
+
+
+
 </body>
-	
+
 
 </html>
