@@ -2,12 +2,45 @@
 <html>
 <head>
 	<title>Birthday Stalker</title>
-	<head>
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-</head>
+	<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+	<script type="text/javascript" src="assets/javascript/logic.js"></script>
 </head>
 <body>
+  <div class= "header">
     <h1 class="animated infinite bounce">Birthday Stalker!</h1>
+  </div>
+  <div class= "maincontent">
+    <h3>Your life, now organized</h3>
+      <ul>
+		<li>Improve personal organization and don't forget important things.</li>
+		<li>Remember birthdays and anniversaries.</li>
+		<li>Organize your everyday events and to-do things.</li>
+		<li>Intelligent estimation of events' periods and automatic postpone</li>
+		<li>Email Reports</li>
+      </ul>
+  </div>
+
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <div class='input-group date' id='datetimepicker1'>
+	    <input type='text' class="form-control" />
+	    <span class="input-group-addon">
+	    <span class="glyphicon glyphicon-calendar"></span>
+	    </span>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+
 </body>
 </html>
