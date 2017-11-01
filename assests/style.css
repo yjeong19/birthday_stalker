@@ -1,0 +1,48 @@
+/*Alert page*/
+
+body
+
+{
+	background-image: url("image/Background.jpg");
+
+}
+
+#alert1
+{
+	font-family: Gabrielle;
+	font-size: 40px;
+	color: blueviolet;
+	text-shadow: 1px 1px #FF0000;
+	
+}
+
+#textAndpic
+
+{
+	margin-top: 52px;
+}
+
+#tagline
+
+{
+	font-family: Gabrielle;
+	font-size: 40px;
+	color: blueviolet;
+	text-shadow: 1px 1px #FF0000;
+	
+}
+
+#text1
+
+{
+	margin-top: 20px;
+}
+
+#tagrow
+
+{
+	margin-top: 20px;
+}
+
+
+/*Alert page end*/
