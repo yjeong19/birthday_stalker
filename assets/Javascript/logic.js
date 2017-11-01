@@ -1,4 +1,7 @@
-
- $(function () {
-     $('#datetimepicker1').datetimepicker();
- });
+ 
+  $( function() {
+    $( "#datepicker" ).datepicker({
+      showOtherMonths: true,
+      selectOtherMonths: true
+    });
+  } );
