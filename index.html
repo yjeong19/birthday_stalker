@@ -10,7 +10,6 @@
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script type="text/javascript" src="assets/javascript/logic.js"></script>
 </head>
 <body>
 	<div class="container">
@@ -65,8 +64,11 @@
     messagingSenderId: "572508190232"
   };
   firebase.initializeApp(config);
+	</script>
 
-	var database = firebase.database();
+	<script type="text/javascript" src="assets/javascript/logic.js"></script>
+
+	<!-- var database = firebase.database();
 	var info = {
 		firstName: $("#fname").val(),
 		lastName: $("#lname").val(),
@@ -88,7 +90,7 @@
 	});
 
 
-</script>
+</script> -->
 
 </body>
 </html>
