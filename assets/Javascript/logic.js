@@ -50,17 +50,6 @@ database.ref().child("/User").once("value", function(snapshot) {
 
 
 
-
-
-  //datePicker function
-  // $( function() {
-  //   $( "#datepicker" ).datepicker({
-  //     showOtherMonths: true,
-  //     selectOtherMonths: true
-  //   });
-  // } );
-
-
 jQuery(function($){
    $("#datepicker").mask("99-99",{placeholder:"mm-dd"});
  });
