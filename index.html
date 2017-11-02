@@ -13,6 +13,9 @@
     <script type="text/javascript" src="assets/javascript/logic.js"></script>
 </head>
 <body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
   <div class= "header">
     <h1 class="animated infinite bounce">Birthday Stalker!</h1>
   </div>
@@ -26,20 +29,25 @@
 		<li>Email Reports</li>
       </ul>
   </div>
+</div>
+</div>
 
-<div class="container">
     <div class="row">
 		<form>
-		    <div class='col-sm-6'>
-			    <label for="fname">Name</label>
-			    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-			    <label for="lname">Email</label>
-			    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+		    <div class='col-md-8'>
+			    <p>Name: <span><input type="text" id="fname" name="firstname" placeholder="Your name.."></span></p>
+			    <!-- <input type="text" id="fname" name="firstname" placeholder="Your name.."> -->
+			    <p>Email: <span><input type="text" id="lname" name="lastname" placeholder="Your last name.."></span></p>
+			    <!-- <input type="text" id="lname" name="lastname" placeholder="Your last name.."> -->
 	            <p>Date: <input type="text" id="datepicker"></p>
 	            <input type="submit" value="Submit" id="submitBtn">
         	</div>
+					<div class="col-md-4">
+
+					</div>
         </form>
     </div>
+</div>
 </div>
 
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->

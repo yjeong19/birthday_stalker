@@ -1,7 +1,8 @@
 body{
 	background-image: url(../images/happybday.jpg);
 	background-repeat: no-repeat;
-    background-size: 100%;
+  background-size: cover;
+
     /*background-height: 80%;*/
 }
 
@@ -14,8 +15,9 @@ body{
 .maincontent{
 	color: #404040;
 	font-size: 20px;
-	padding: 30px;
+
 }
+
 
 input[type=text], select {
     width: 100%;
