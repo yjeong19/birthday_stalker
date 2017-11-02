@@ -36,27 +36,26 @@
 
   <script>
   //code below calls the calendar from the calendar folder
-  $(document).ready(function() {
-<<<<<<< HEAD
-  var database = firebase.database()
-    var userref = (database.ref())
-
-    userref.child('/User').once("value", function (snap) {
-      console.log(snap)
-      snap.forEach(function(child) {
-        console.log(child.val())
-
-        $('.fc-day').each(function() {
-          var thedata = $(this).data('date');
-          $(this).val(thedata)
-          console.log(this)
-          $(this).text(thedata)
-        })
-      })
-    })
+  // $(document).ready(function() {
+	//
+  // var database = firebase.database()
+  //   var userref = (database.ref())
+	//
+  //   userref.child('/User').once("value", function (snap) {
+  //     console.log(snap)
+  //     snap.forEach(function(child) {
+  //       console.log(child.val())
+	//
+  //       $('.fc-day').each(function() {
+  //         var thedata = $(this).data('date');
+  //         $(this).val(thedata)
+  //         console.log(this)
+  //         $(this).text(thedata)
+  //       })
+  //     })
+  //   })
     // page is now ready, initialize the calendar...
-=======
->>>>>>> b1219e72f11b8ecf870faf9bb04ce8f3bd2a1dd2
+
 
 
     $('#calendar').fullCalendar({
@@ -65,7 +64,6 @@
       }
   });
 
-  });
   </script>
 
 

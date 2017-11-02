@@ -7,8 +7,7 @@ var info = {
 }
 
 
-<<<<<<< HEAD
-	
+
 //firebase end
 
 database.ref().child("/User").once("value", function(snapshot) {
@@ -23,7 +22,6 @@ for (var i = 0; i < keys.length; i++) {
 		var bday = userData[k].dob;
 		console.log(first, last, bday);
 	}
-=======
 
 $("#submitBtn").on("click", function(){
 
@@ -33,13 +31,14 @@ $("#submitBtn").on("click", function(){
       lastName: $("#lname").val(),
       dob: $("#datepicker").val()
   })
+})
 });
 
 database.ref().child("/User").once("value", function(snapshot) {
   var userData = snapshot.val();
-  console.log(userData);
+  // console.log(userData);
   var keys = Object.keys(userData);
-  console.log(keys);
+  // console.log(keys);
 
   for (var i = 0; i < keys.length; i++){
     var k = keys[i];
@@ -56,35 +55,23 @@ database.ref().child("/User").once("value", function(snapshot) {
   }
 })
 }
->>>>>>> b1219e72f11b8ecf870faf9bb04ce8f3bd2a1dd2
 });
 //firebase end
 
-<<<<<<< HEAD
 
 
 
 
 
   //datePicker function
-  $( function() {
-    $( "#datepicker" ).datepicker({
-      showOtherMonths: true,
-      selectOtherMonths: true
-    });
-  } );
-
-
-=======
-jQuery(function($){
-   $("#datepicker").mask("99-99",{placeholder:"mm-dd"});
- });
-
-  //
   // $( function() {
   //   $( "#datepicker" ).datepicker({
   //     showOtherMonths: true,
   //     selectOtherMonths: true
   //   });
   // } );
->>>>>>> b1219e72f11b8ecf870faf9bb04ce8f3bd2a1dd2
+
+
+jQuery(function($){
+   $("#datepicker").mask("99-99",{placeholder:"mm-dd"});
+ });
