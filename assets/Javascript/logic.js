@@ -34,21 +34,22 @@ database.ref().child("/User").once("value", function(snapshot) {
       var date = $(this).data('date');
       $(this).val(date);
       //the last was a test --- need to figure out how to make date input yyyy-mm-dd
-      if(last === date){
-      $(this).text("happy Birthday!")
+      if("2017-"+bday === date){
+      $(this).text("It is " + first + "'s birthday! Click to send message")
   }
 })
 }
 });
 //firebase end
 
+jQuery(function($){
+   $("#datepicker").mask("99-99",{placeholder:"mm-dd"});
+ });
 
-
-
-
-  $( function() {
-    $( "#datepicker" ).datepicker({
-      showOtherMonths: true,
-      selectOtherMonths: true
-    });
-  } );
+  //
+  // $( function() {
+  //   $( "#datepicker" ).datepicker({
+  //     showOtherMonths: true,
+  //     selectOtherMonths: true
+  //   });
+  // } );
