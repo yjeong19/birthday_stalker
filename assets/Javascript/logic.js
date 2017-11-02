@@ -7,6 +7,7 @@ var info = {
 }
 
 
+
 $("#submitBtn").on("click", function(){
 
   database.ref("/User").push(
@@ -14,13 +15,8 @@ $("#submitBtn").on("click", function(){
       firstName: $("#fname").val(),
       lastName: $("#lname").val(),
       dob: $("#datepicker").val()
-
   })
-
-
 });
-
-//firebase end
 
 database.ref().child("/User").once("value", function(snapshot) {
   var userData = snapshot.val();
@@ -34,10 +30,18 @@ database.ref().child("/User").once("value", function(snapshot) {
     var last = userData[k].lastName;
     var bday = userData[k].dob;
 
-    console.log(first,last,bday);
+    $('.fc-day').each(function() {
+      var date = $(this).data('date');
+      $(this).val(date);
+      //the last was a test --- need to figure out how to make date input yyyy-mm-dd
+      if(last === date){
+      $(this).text("happy Birthday!")
   }
-
+})
+}
 });
+//firebase end
+
 
 
 
