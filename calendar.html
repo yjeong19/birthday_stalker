@@ -36,6 +36,22 @@
   <script>
   //code below calls the calendar from the calendar folder
   $(document).ready(function() {
+  var database = firebase.database()
+    var userref = (database.ref())
+
+    userref.child('/User').once("value", function (snap) {
+      console.log(snap)
+      snap.forEach(function(child) {
+        console.log(child.val())
+
+        $('.fc-day').each(function() {
+          var thedata = $(this).data('date');
+          $(this).val(thedata)
+          console.log(this)
+          $(this).text(thedata)
+        })
+      })
+    })
     // page is now ready, initialize the calendar...
 
     // $('#calendar').fullCalendar({
