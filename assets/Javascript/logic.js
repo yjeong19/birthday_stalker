@@ -1,3 +1,4 @@
+// firebase start
 var database = firebase.database();
 var info = {
   firstName: $("#fname").val(),
@@ -18,6 +19,8 @@ $("#submitBtn").on("click", function(){
 
 
 });
+
+//firebase end
 
 
 
