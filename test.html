@@ -1,84 +1,85 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>testing firebase</title>
-      <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
-      <link rel='stylesheet' href='./assests/calendar/fullcalendar.css' />
-      <script src='./assests/calendar/lib/jquery.min.js'></script>
-      <script src='./assests/calendar/lib/moment.min.js'></script>
-      <script src='./assests/calendar/fullcalendar.js'></script>
-  </head>
-    <body>
+<head>
+	<title>Birthday Stalker</title>
+	<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+	<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+<body>
+  <div class= "header">
+    <h1 class="animated infinite bounce">Birthday Stalker!</h1>
+  </div>
+  <div class= "maincontent">
+    <h3>Your life, now organized</h3>
+      <ul>
+		<li>Improve personal organization and don't forget important things.</li>
+		<li>Remember birthdays and anniversaries.</li>
+		<li>Organize your everyday events and to-do things.</li>
+		<li>Intelligent estimation of events' periods and automatic postpone</li>
+		<li>Email Reports</li>
+      </ul>
+  </div>
 
-      <script>
-          // Initialize Firebase
-      var config = {
-            apiKey: "AIzaSyBlVKzd01CFll4MR5GTwaLs98Jzuil8ZeU",
-            authDomain: "birthdaystalker-e466a.firebaseapp.com",
-            databaseURL: "https://birthdaystalker-e466a.firebaseio.com",
-            projectId: "birthdaystalker-e466a",
-            storageBucket: "birthdaystalker-e466a.appspot.com",
-            messagingSenderId: "572508190232"
-          };
-          firebase.initializeApp(config);
-          // Reference to the recommendations object in your Firebase database
-      var recommendations = firebase.database().ref("recommendations");
+<div class="container">
+  <form>
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
 
-// Save a new recommendation to the database, using the input in the form
-      var submitRecommendation = function () {
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
 
-  // Get input values from each of the form elements
-      var title = $("#talkTitle").val();
-      var presenter = $("#talkPresenter").val();
-      var link = $("#talkLink").val();
+    <div class='input-group date' id='datetimepicker1'>
+	    <input type='text' class="form-control" id="dob">
+	    <span class="input-group-addon">
+	    <span class="glyphicon glyphicon-calendar"></span>
+	    </span>
 
-  // Push a new recommendation to the database using those values
-        recommendations.push({
-          "title": title,
-          "presenter": presenter,
-        });
-        };
+    <button id="submitBtn">Submit</button>
+  </form>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-// When the window is fully loaded, call this function.
-// Note: because we are attaching an event listener to a particular HTML element
-// in this function, we can't do that until the HTML element in question has
-// been loaded. Otherwise, we're attaching our listener to nothing, and no code
-// will run when the submit button is clicked.
-$(window).load(function () {
+<!-- firebase -->
+<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDNyDvMTsfsKfhMtIwLAXgcJpFZEGD_u3c",
+    authDomain: "fir-practice-7e317.firebaseapp.com",
+    databaseURL: "https://fir-practice-7e317.firebaseio.com",
+    projectId: "fir-practice-7e317",
+    storageBucket: "fir-practice-7e317.appspot.com",
+    messagingSenderId: "846690881249"
+  };
+  firebase.initializeApp(config);
 
-  // Find the HTML element with the id recommendationForm, and when the submit
-  // event is triggered on that element, call submitRecommendation.
-  $("#recommendationForm").submit(submitRecommendation);
-
-});
-        </script>
-           <!-- Load the application script, which will save data to our Firebase app when we click the button. -->
-           <!-- <script src="application.js"></script> -->
-
-           <div class="container">
-             <h1>Talks You Should Watch</h1>
-
-             <h3>Submit a Talk</h3>
-
-             <form id="recommendationForm">
-               <div class="form-group">
-                 <label for="talkTitle">Title</label>
-                 <input class="form-control" id="talkTitle" placeholder="Title of the talk">
-               </div>
-
-               <div class="form-group">
-                 <label for="talkPresenter">Presenter</label>
-                 <input class="form-control" id="talkPresenter" placeholder="Name of the presenter">
-               </div>
+  var database = firebase.database();
+  var info = {
+    firstName: $("#fname").val(),
+    lastName: $("#lname").val(),
+    dob: $("#dob").val()
+  }
 
 
-               <!-- When you click this button, trigger the submit event on this form. -->
-               <button type="submit" class="btn btn-default">Submit</button>
-             </form>
-           </div>
+  $("#submitBtn").on("click", function(){
 
-       </html>
+    database.ref("/User").push(
+      info = {
+        firstName: $("#fname").val(),
+        lastName: $("#lname").val(),
+        dob: $("#dob").val()
 
-  </body>
+    })
+
+
+  });
+
+
+</script>
+
+
+<!-- <script type="text/javascript" src="assets/javascript/logic.js"></script> -->
+</body>
 </html>
