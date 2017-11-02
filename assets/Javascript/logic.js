@@ -5,23 +5,13 @@ var info = {
   lastName: $("#lname").val(),
   dob: $("#datepicker").val()
 }
-
+var k;
+var first;
+var last;
+var bday;
 
 
 //firebase end
-
-database.ref().child("/User").once("value", function(snapshot) {
-  var userData = snapshot.val();
-  var keys = Object.keys(userData);
-  console.log(keys);
-
-for (var i = 0; i < keys.length; i++) {
-		var k = keys[i];
-		var first = userData[k].firstName;
-		var last = userData[k].lastName;
-		var bday = userData[k].dob;
-		console.log(first, last, bday);
-	}
 
 $("#submitBtn").on("click", function(){
 
@@ -31,7 +21,6 @@ $("#submitBtn").on("click", function(){
       lastName: $("#lname").val(),
       dob: $("#datepicker").val()
   })
-})
 });
 
 database.ref().child("/User").once("value", function(snapshot) {
@@ -41,10 +30,10 @@ database.ref().child("/User").once("value", function(snapshot) {
   // console.log(keys);
 
   for (var i = 0; i < keys.length; i++){
-    var k = keys[i];
-    var first = userData[k].firstName;
-    var last = userData[k].lastName;
-    var bday = userData[k].dob;
+    k = keys[i];
+    first = userData[k].firstName;
+    last = userData[k].lastName;
+    bday = userData[k].dob;
 
     $('.fc-day').each(function() {
       var date = $(this).data('date');
