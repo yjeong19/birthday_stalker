@@ -1,8 +1,8 @@
 body{
 	background-image: url(../images/happybday.jpg);
 	background-repeat: no-repeat;
-    background-size: 95%;
-    background-height: 80%;
+    background-size: 100%;
+    /*background-height: 80%;*/
 }
 
 .header{
@@ -35,7 +35,3 @@ input[type=submit] {
     border-radius: 4px;
     box-sizing: border-box;
 }
-
-
-
-  
