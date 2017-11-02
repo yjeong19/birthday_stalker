@@ -22,6 +22,12 @@ $("#submitBtn").on("click", function(){
 
 //firebase end
 
+database.ref().child("/User").once("value", function(snapshot) {
+  var userData = snapshot.val();
+
+  console.log(userData);
+});
+
 
 
 
