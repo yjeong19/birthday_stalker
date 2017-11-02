@@ -24,8 +24,19 @@ $("#submitBtn").on("click", function(){
 
 database.ref().child("/User").once("value", function(snapshot) {
   var userData = snapshot.val();
-
   console.log(userData);
+  var keys = Object.keys(userData);
+  console.log(keys);
+
+  for (var i = 0; i < keys.length; i++){
+    var k = keys[i];
+    var first = userData[k].firstName;
+    var last = userData[k].lastName;
+    var bday = userData[k].dob;
+
+    console.log(first,last,bday);
+  }
+
 });
 
 

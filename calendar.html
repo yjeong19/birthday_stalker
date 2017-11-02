@@ -4,7 +4,6 @@
 
 <head>
 	<title>Calendar</title>
-  <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
   <link rel='stylesheet' href='./assets/calendar/fullcalendar.css' />
   <script src='./assets/calendar/lib/jquery.min.js'></script>
   <script src='./assets/calendar/lib/moment.min.js'></script>
@@ -12,35 +11,33 @@
 
 </head>
 <body>
-  <script>
-      // Initialize Firebase
-  var config = {
-        apiKey: "AIzaSyBlVKzd01CFll4MR5GTwaLs98Jzuil8ZeU",
-        authDomain: "birthdaystalker-e466a.firebaseapp.com",
-        databaseURL: "https://birthdaystalker-e466a.firebaseio.com",
-        projectId: "birthdaystalker-e466a",
-        storageBucket: "birthdaystalker-e466a.appspot.com",
-        messagingSenderId: "572508190232"
-      };
-      firebase.initializeApp(config);
-    </script>
-
-<!-- start HTML  -->
-
 
   <h1>Birthday Stalker Calendar!</h1>
 
 
   <div id="calendar"></div>
 
+	<!-- firebase -->
+	<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyBlVKzd01CFll4MR5GTwaLs98Jzuil8ZeU",
+	    authDomain: "birthdaystalker-e466a.firebaseapp.com",
+	    databaseURL: "https://birthdaystalker-e466a.firebaseio.com",
+	    projectId: "birthdaystalker-e466a",
+	    storageBucket: "birthdaystalker-e466a.appspot.com",
+	    messagingSenderId: "572508190232"
+	  };
+	  firebase.initializeApp(config);
+		</script>
+
+<script src="./assets/Javascript/logic.js"></script>
+
   <script>
   //code below calls the calendar from the calendar folder
   $(document).ready(function() {
-    // page is now ready, initialize the calendar...
 
-    // $('#calendar').fullCalendar({
-    //   // put your options and callbacks here
-    // })
 
     $('#calendar').fullCalendar({
       dayClick: function() {
