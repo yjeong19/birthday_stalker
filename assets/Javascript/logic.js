@@ -6,10 +6,6 @@ var info = {
   dob: $("#date").val(),
   check: false
 }
-var k;
-var name;
-var email;
-var bday;
 
 
 //makes date only mm-dd for formatting
@@ -49,13 +45,12 @@ database.ref().child("/User").once("value", function(snapshot) {
   // console.log(keys);
 
   for (var i = 0; i < keys.length; i++) {
-    k = keys[i];
-    name = userData[k].name;
-    email = userData[k].email;
-    bday = userData[k].dob;
-    check = userData[k].check;
+    var k = keys[i];
+    var name = userData[k].name;
+    var email = userData[k].email;
+    var bday = userData[k].dob;
     var subject = 'Happy Birthday ' + name + '!';
-    var emailBody = 'Some blah';
+    var emailBody = 'Happy Birthday! ' + name + ' wish you the very best!';
 
 
     $('.fc-day').each(function() {
