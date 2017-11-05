@@ -56,7 +56,6 @@ database.ref().child("/User").once("value", function(snapshot) {
     $('.fc-day').each(function() {
       date = $(this).data('date');
       $(this).val(date);
-      //the last was a test --- need to figure out how to make date input yyyy-mm-dd
       if ("2017-" + bday === date) {
         $(this).text("It is " + name + "'s birthday! Click to send message");
         console.log(bday);

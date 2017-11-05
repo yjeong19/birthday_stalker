@@ -3,9 +3,25 @@ body{
     background-image: url(../images/happybday.jpg);
     background-position: center;
     background-repeat: no-repeat;
-    /*background-size: 1500px 600px;*/
-    /*background-height: 30%;*/
+    background-size: cover;
+    /*background-height: 100%;*/
 }
+
+#bdayCal{
+  /*border: 1px solid black;*/
+  color: black;
+}
+
+.fc-unthemed td{
+  border-color: black;
+}
+
+
+
+a{
+  color: black;
+}
+
 .header{
     font-size: 70px;
     color: #404040;
@@ -16,10 +32,11 @@ body{
     font-size: 20px;
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
+
 #form{
     background-color: white;
-    width: 400px;
-    height: 300px;
+    width: 100%;
+    height: 100%;
 }
 /*homepage form*/
 input[type=text], select {
@@ -59,10 +76,12 @@ input[type=submit] {
     margin-left: 10px;
 }
 /*links to the other pages*/
+
+
 #navbarSupportedContent{
     height: 5px;
     padding-top: 25px;
-    position: relative;
+    /*position: relative;*/
     left: 120%;
     font-size: 20px;
     color: #ffffff;
