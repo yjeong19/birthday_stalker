@@ -1,36 +1,47 @@
 // firebase start
 var database = firebase.database();
 var info = {
-  firstName: $("#fname").val(),
-  lastName: $("#lname").val(),
-  dob: $("#datepicker").val(),
+  name: $("#name").val(),
+  email: $("#email").val(),
+  dob: $("#date").val(),
   check: false
 }
 var k;
-var first;
-var last;
+var name;
+var email;
 var bday;
-var date;
 
 
+//makes date only mm-dd for formatting
+jQuery(function($){
+   $("#date").mask("99-99",{placeholder:"mm-dd"});
+ });
 
-//firebase end
 
-$('.fc-next-button').on('click', function() {
-  console.log("clicked");
-})
-
-$("#submitBtn").on("click", function() {
-
-  database.ref("/User").push(
-    info = {
-      firstName: $("#fname").val(),
-      lastName: $("#lname").val(),
-      dob: $("#datepicker").val(),
-      check: false
-    })
+$( document ).ready(function() {
+        $('#calendar').fullCalendar({
+});
 });
 
+
+$('.fc-prev-button').click(function(){
+   alert('prev is clicked, do something');
+});
+
+$('.fc-button-next').click(function(){
+   alert('nextis clicked, do something');
+});
+
+$("#submitBtn").on("click", function() {
+  database.ref("/User").push(
+    info = {
+      name: $("#name").val(),
+      email: $("#email").val(),
+      dob: $("#date").val(),
+      // check: false
+    })
+});
+//
 database.ref().child("/User").once("value", function(snapshot) {
   var userData = snapshot.val();
   // console.log(userData);
@@ -39,11 +50,12 @@ database.ref().child("/User").once("value", function(snapshot) {
 
   for (var i = 0; i < keys.length; i++) {
     k = keys[i];
-    first = userData[k].firstName;
-    last = userData[k].lastName;
+    name = userData[k].name;
+    email = userData[k].email;
     bday = userData[k].dob;
     check = userData[k].check;
-
+    var subject = 'Happy Birthday ' + name + '!';
+    var emailBody = 'Some blah';
 
 
     $('.fc-day').each(function() {
@@ -51,11 +63,18 @@ database.ref().child("/User").once("value", function(snapshot) {
       $(this).val(date);
       //the last was a test --- need to figure out how to make date input yyyy-mm-dd
       if ("2017-" + bday === date) {
-        $(this).text("It is " + first + "'s birthday! Click to send message");
-        $(this).wrap('<a href="alert.html" target="_blank"/>');
+        $(this).text("It is " + name + "'s birthday! Click to send message");
+        console.log(bday);
+        // $(this).wrap("<a href="mailto:"/>");
+        $(this).wrap(
+       $("<a>").attr("href", "mailto:" + email + '?subject=' + subject + '&body=' + emailBody)
+        );
       } else if ('2018-' + bday === date) {
-        $(this).text("It is " + first + "'s birthday! Click to send message");
-        $(this).wrap('<a href="alert.html"/>');
+        $(this).text("It is " + name + "'s birthday! Click to send message");
+        $(this).wrap('<a href="alert.html"/> target="_blank" id="test"/>');
+        $(this).wrap(
+       $("<a>").attr("href", "mailto:" + email + '?subject=' + subject + '&body=' + emailBody)
+        );
       }
     })
   }
@@ -63,42 +82,27 @@ database.ref().child("/User").once("value", function(snapshot) {
 
 //firebase end
 
-//alert email
-$(function() {
-  $('#emailLink').on('click', function(event) {
-    database.ref().child('/User').once("value", function(snapshot) {
-      var userData = snapshot.val();
-      // console.log(userData);
-      var keys = Object.keys(userData);
-      // console.log(keys);
-
-      for (var i = 0; i < keys.length; i++) {
-        k = keys[i];
-        first = userData[k].firstName;
-        last = userData[k].lastName;
-        bday = userData[k].dob;
-
-        if (bday) {
-
-          // var email = last;
-          var subject = 'happy birthday';
-          var emailBody = 'Some blah';
-          window.location = 'mailto:' + last + '?subject=' + subject + '&body=' + emailBody;
-        }
-      }
-      console.log(userData[keys[1]].dob);
-    })
-  })
-})
-
-
-
-//makes date only mm-dd for formatting
-$('#datepicker').on('click', function() {
-
-  jQuery(function($) {
-    $("#datepicker").mask("99-99", {
-      placeholder: "mm-dd"
-    });
-  })
-});
+// alert email
+// $(function() {
+//   $('#emailLink').on('click', function(event) {
+//     database.ref().child('/User').once("value", function(snapshot) {
+//       var userData = snapshot.val();
+//       // console.log(userData);
+//       var keys = Object.keys(userData);
+//       // console.log(keys);
+//
+//       for (var i = 0; i < keys.length; i++) {
+//         k = keys[i];
+//         first = userData[k].firstName;
+//         last = userData[k].lastName;
+//         bday = userData[k].dob;
+//
+//
+//           // var email = last;
+//           var subject = 'happy birthday';
+//           var emailBody = 'Some blah';
+//           window.location = 'mailto:' + last + '?subject=' + subject + '&body=' + emailBody;
+//       }
+//     })
+//   })
+// })
