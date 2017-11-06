@@ -46,18 +46,13 @@ database.ref().child("/User").once("value", function(snapshot) {
       date = $(this).data('date');
       $(this).val(date);
 
-      if ("2017-" + bday === date) {
+      if ("2017-" + bday === date || "2018-" + bday === date) {
         $(this).text("It is " + name + "'s birthday! Click to send message");
         $(this).wrap(
-       $("<a class='calendarText'>").attr("href", "mailto:" + email + '?subject=' + subject + '&body=' + emailBody)
-        );
-      } else if ('2018-' + bday === date) {
-        $(this).text("It is " + name + "'s birthday! Click to send message");
-        $(this).wrap('<a href="alert.html"/> target="_blank" id="test"/>');
-        $(this).wrap(
-       $("<a class='calendarText>").attr("href", "mailto:" + email + '?subject=' + subject + '&body=' + emailBody)
+        $("<a class='calendarText'>").attr("href", "mailto:" + email + '?subject=' + subject + '&body=' + emailBody)
         );
       }
+
     })
   }
 })
