@@ -55,7 +55,7 @@ database.ref().child("/User").once("value", function(snapshot) {
         $(this).text("It is " + name + "'s birthday! Click to send message");
         $(this).wrap('<a href="alert.html"/> target="_blank" id="test"/>');
         $(this).wrap(
-       $("<a>").attr("href", "mailto:" + email + '?subject=' + subject + '&body=' + emailBody)
+       $("<a class='calendarText>").attr("href", "mailto:" + email + '?subject=' + subject + '&body=' + emailBody)
         );
       }
     })
