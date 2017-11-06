@@ -19,14 +19,14 @@ $( document ).ready(function() {
 });
 });
 
-
-$('.fc-prev-button').click(function(){
-   alert('prev is clicked, do something');
-});
-
-$('.fc-button-next').click(function(){
-   alert('nextis clicked, do something');
-});
+// 
+// $('.fc-prev-button').click(function(){
+//    alert('prev is clicked, do something');
+// });
+//
+// $('.fc-button-next').click(function(){
+//    alert('nextis clicked, do something');
+// });
 
 $("#submitBtn").on("click", function() {
   database.ref("/User").push(
