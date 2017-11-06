@@ -17,6 +17,26 @@ h2{
   color: black;
 }
 
+hr {
+    background-color: white !important;
+    /*color: dimgrey !important;*/
+    border: none;
+    height: 2px !important;
+
+}
+
+.homeImage{
+  height:500px;
+  width: 100%;
+  margin-bottom: 30px;
+
+}
+
+.info{
+  color: #404040;
+  font-size: 20px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
 
 #border{
   border-left: 1px solid white;
