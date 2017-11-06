@@ -7,6 +7,28 @@ body{
     /*background-height: 100%;*/
 }
 
+h1{
+  color: black;
+}
+
+h2{
+  color: black;
+}
+
+#border{
+  border-left: 1px solid white;
+}
+
+ul.nav.navbar{
+  position: absolute;
+   /*top: 50px;*/
+   right: 15%;
+   margin: 0px;
+   top: 0px;
+   height: 100%;
+}
+}
+
 #bdayCal{
   /*border: 1px solid black;*/
   color: black;
@@ -15,8 +37,6 @@ body{
 .fc-unthemed td{
   border-color: black;
 }
-
-
 
 a{
   color: black;
@@ -61,10 +81,16 @@ input[type=submit] {
     font-family: "Times New Roman", Times, serif;
     background-color: #F16745;
     float: left;
+    position: absolute;
+     /*top: 50px;*/
+     left: 10%;
+     margin: 0px;
+     top: 0px;
+     height: 100%;
 }
 .navbar{
   background-color: #F16745;
-  height: 80px;
+  height: 60px;
 }
 /*website name*/
 #brand {
@@ -90,8 +116,12 @@ input[type=submit] {
 .img{
    height: 35px;
    width: 35px;
-   float: left;
-   margin:10px 1px 60px 20px;
+   /*float: ;*/
+   margin:0;
+   bottom: 10px;
+   margin-right: 10px;
+   margin-bottom: 10px;
+   /*left: 15%;*/
 }
 .nav-link{
     color: #ffffff;

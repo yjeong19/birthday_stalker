@@ -4,7 +4,6 @@ var info = {
   name: $("#name").val(),
   email: $("#email").val(),
   dob: $("#date").val(),
-  check: false
 }
 
 
@@ -18,15 +17,6 @@ $( document ).ready(function() {
         $('#calendar').fullCalendar({
 });
 });
-
-// 
-// $('.fc-prev-button').click(function(){
-//    alert('prev is clicked, do something');
-// });
-//
-// $('.fc-button-next').click(function(){
-//    alert('nextis clicked, do something');
-// });
 
 $("#submitBtn").on("click", function() {
   database.ref("/User").push(
@@ -52,14 +42,11 @@ database.ref().child("/User").once("value", function(snapshot) {
     var subject = 'Happy Birthday ' + name + '!';
     var emailBody = 'Happy Birthday! ' + name + ' wish you the very best!';
 
-
     $('.fc-day').each(function() {
       date = $(this).data('date');
       $(this).val(date);
       if ("2017-" + bday === date) {
         $(this).text("It is " + name + "'s birthday! Click to send message");
-        console.log(bday);
-        // $(this).wrap("<a href="mailto:"/>");
         $(this).wrap(
        $("<a>").attr("href", "mailto:" + email + '?subject=' + subject + '&body=' + emailBody)
         );
