@@ -9,18 +9,47 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 <!--Link  to allow view on mobile site-->
 	 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--	CSS-->
 	 <link rel="stylesheet" type="text/css" href="assets/css/style_rain.css">
+	 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
 	 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> <!--jquery Ui -->
 </head>
 <body>
+
+
+	<!-- navbar -->
+	<nav class="navbar navbar-expand-md navbar-light">
+			<div class="header">
+					<div class="navbar-brand mb-0 h1" id="brand"><span><img src="assets/images/logo.png" alt="logo" class="img"></span>Birthday Stalker</div>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="nav navbar">
+							<li class="nav-item">
+							<a class="nav-link" href="index.html">Home</a>
+							</li>
+							<br>
+							<li class="nav-item">
+							<a class="nav-link" href="calendar.html" id='border'>Calendar</a>
+							</li>
+							<br>
+							<li class="nav-item">
+							<a class="nav-link" href="alert.html">Alert</a>
+							</li>
+					</ul>
+					</div>
+			</div>
+	</nav>
+
+<!--	Container-->
 	<div class="container">
-	<div class="row">
+<div class="row">
 		<div class="col-sm-12">
 	</div>
 </div>
 	<div class="row" id="textAndpic">
-		<div class="col-sm-6">
+		<div class="col-sm-6" id="content">
 			<div class="row" id="text1">
 				<div class="col-sm-12">
 					<h2 id = "alert1">Let's be the first one to celebrate birthday with your friends</h2>
@@ -32,9 +61,9 @@
 
 			<div class="row" id="buttonrow">
 				<div class="col-sm-12">
-					<p id="date">blahalkjdflaksdjfakjdjsf</p>
 
-					<a href="#" name="emailLink" id="emailLink"><button type="button" id="email" class="btn btn-primary btn-lg">SEND A WISH NOW</button>
+
+					<a href="#" name="emailLink" id="emailLink"><button type="button" id="email" class="btn btn-primary btn-lg">SEND A WISH NOW</button></a>
 
 				</div>
 
@@ -46,14 +75,23 @@
 				</div>
 			</div>
 
+<!--
+			<div class="row">
+				<div class="col-12-sm">
+					<img src="assets/images/postcard1.jpg" class="rounded float-left" width="300px" height="250px" alt="...">
+				</div>
+			</div>
+-->
+
 		</div>
 
+<!--
 		<div class="col-sm-6">
-
 			<img class="cupcake" src="assets/images/bluecupcake.png" alt="cupcake">
-
-
 		</div>
+
+-->
+
 	</div>
 
 </div>

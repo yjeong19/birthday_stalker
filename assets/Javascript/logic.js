@@ -64,26 +64,12 @@ database.ref().child("/User").once("value", function(snapshot) {
 //firebase end
 
 // alert email
-// $(function() {
-//   $('#emailLink').on('click', function(event) {
-//     database.ref().child('/User').once("value", function(snapshot) {
-//       var userData = snapshot.val();
-//       // console.log(userData);
-//       var keys = Object.keys(userData);
-//       // console.log(keys);
-//
-//       for (var i = 0; i < keys.length; i++) {
-//         k = keys[i];
-//         first = userData[k].firstName;
-//         last = userData[k].lastName;
-//         bday = userData[k].dob;
-//
-//
-//           // var email = last;
-//           var subject = 'happy birthday';
-//           var emailBody = 'Some blah';
-//           window.location = 'mailto:' + last + '?subject=' + subject + '&body=' + emailBody;
-//       }
-//     })
-//   })
-// })
+$(function() {
+  $('#emailLink').on('click', function(event) {
+
+          // var email = last;
+          var subject = 'happy birthday';
+          var emailBody = 'Some blah';
+          window.location = 'mailto:' + "someone@someone.com" + '?subject=' + subject + '&body=' + emailBody;
+      })
+  })
