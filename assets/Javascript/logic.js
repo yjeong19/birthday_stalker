@@ -40,7 +40,7 @@ database.ref().child("/User").once("value", function(snapshot) {
     var email = userData[k].email;
     var bday = userData[k].dob;
     var subject = 'Happy Birthday ' + name + '!';
-    var emailBody = 'Happy Birthday! ' + name + ' wish you the very best!';
+    var emailBody = 'Happy Birthday ' + name + ', I wish you the very best!';
 
     $('.fc-day').each(function() {
       date = $(this).data('date');
