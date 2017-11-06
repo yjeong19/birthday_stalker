@@ -78,6 +78,9 @@
 	$(".fc-next-button").on('click',function(){
 		reload();
 	});
+	$(".fc-today-button").on('click',function(){
+		reload();
+	});
 
 function reload (){
    database.ref().child("/User").once("value", function(snapshot) {
