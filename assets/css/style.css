@@ -32,6 +32,11 @@ hr {
 
 }
 
+h5{
+  float: center;
+  color: #404040;
+}
+
 .info{
   color: #404040;
   font-size: 20px;
