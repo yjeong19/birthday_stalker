@@ -3,15 +3,15 @@
 body
 
 {
-	background-image: url("../images/background.jpg");
-
+	background-color: #72D9E0;
 }
+
 
 #alert1
 {
-	font-family: Gabrielle;
+	font-family: Vivaldi;
 	font-size: 40px;
-	color: blueviolet;
+	color: black;
 	text-shadow: 1px 1px #FF0000;
 
 }
@@ -25,9 +25,9 @@ body
 #tagline
 
 {
-	font-family: Gabrielle;
+	font-family: Vivaldi;
 	font-size: 40px;
-	color: blueviolet;
+	color: black;
 	text-shadow: 1px 1px #FF0000;
 
 }
@@ -44,5 +44,88 @@ body
 	margin-top: 20px;
 }
 
+/*
+.cupcake
+{
+	height: 700px;
+	width: 350px;
+}
+*/
+
+/*
+.row
+{
+	width: 700px;
+
+*/
+}
+
+#textAndpic
+{
+/*
+	border: solid;
+	border-color: white;
+	background-color: #F16745;
+	border-radius: 25px;
+	opacity: 0.7%;
+*/
+
+}
+
+.container{
+  margin-top: 50px;
+}
+
+.btn {
+	margin-top: 50px;
+  padding: 15px 25px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #404040;
+  background-color: #FFC65D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  opacity: 50%;
+}
+
+.btn:hover {background-color: #3e8e41}
+
+.btn:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+
+}
+
+.cupcake
+{
+	margin-left: 250px;
+	height: 480px;
+	width: 450px;
+}
 
 /*Alert page end*/
+
+/*navbar*/
+.navbar-brand{
+    font-family: "Times New Roman", Times, serif;
+    background-color: #F16745;
+    float: left;
+    position: absolute;
+     /*top: 50px;*/
+     left: 10%;
+     margin: 0px;
+     top: 0px;
+     height: 100%;
+}
+
+h2
+{
+	background-color: #72D9E0;
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 40px;
+	color: #404040;
+}
