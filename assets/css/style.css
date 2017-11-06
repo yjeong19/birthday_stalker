@@ -9,6 +9,7 @@ body{
 
 h1{
   color: black;
+  font-family: 'Acme', sans-serif;
 }
 
 h2{
@@ -18,6 +19,18 @@ h2{
 #border{
   border-left: 1px solid white;
   border-right: 1px solid white;
+}
+
+.calendarText{
+  color: red;
+  font-weight: bold;
+  font-family: 'Gloria Hallelujah', cursive;
+  height: 1000px;
+
+}
+
+.fc td {
+  vertical-align: text-bottom;
 }
 
 ul.nav.navbar{
