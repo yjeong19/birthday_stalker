@@ -1,0 +1,132 @@
+h1
+{
+	color: white;
+	font-weight: bold;
+	margin-left: 10px;
+}
+
+.navbar-brand{
+    font-family: "Times New Roman", Times, serif;
+    background-color: #F16745;
+    float: left;
+    position: absolute;
+     /*top: 50px;*/
+     left: 10%;
+     margin: 0px;
+     top: 0px;
+     height: 100%;
+}
+.navbar{
+  background-color: #F16745;
+  height: 60px;
+}
+
+.img{
+   height: 35px;
+   width: 35px;
+   /*float: ;*/
+   margin:0;
+   bottom: 10px;
+   margin-right: 10px;
+   margin-bottom: 10px;
+   /*left: 15%;*/
+}
+.nav-link{
+    color: #ffffff;
+    font-family: 'Georgia', Times, Times New Roman, serif;
+}
+
+#navbarSupportedContent{
+    height: 5px;
+    padding-top: 25px;
+    /*position: relative;*/
+    left: 120%;
+    font-size: 20px;
+    color: #ffffff;
+}
+
+#calendar
+{
+	background-color: silver;
+}
+
+.fc-day-header
+{
+	background-color: #0000FF;
+	color: white;
+}
+
+.fc-day-number
+{
+	color: brown;
+}
+
+.fc-day
+{
+	background-color: aliceblue;
+	font-family: sans-serif;
+	margin-top: 10px;
+	color: black''
+}
+
+.fc-left
+{
+margin-left: 700px;
+}
+
+.fc-header-toolbar
+{
+	margin-top: 10px;
+}
+
+.fc-toolbar
+{
+	background-color: white;
+	background-color: orangered;
+	margin-top: 10px;
+}
+
+h2
+{
+	color: white;
+	background-color: orangered;
+
+}
+
+.fc-today-button
+{
+	background-color: #008CBA;
+	color: white;
+
+}
+.fc-corner-left
+{
+
+}
+
+.fc-courner-right
+{
+
+}
+
+.fc-widget-content
+{
+	color: black;
+}
+
+$.calendarText
+{
+	font-size: 20px;
+	color: blueviolet;
+}
+
+.fc-day-number
+{
+	color: darkblue;
+	font-weight: bold;
+}
+
+.fc-state-default
+{
+	background-color: blue;
+}

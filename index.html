@@ -14,7 +14,7 @@
         <!-- <script src="./assets/jquery.js" type="text/javascript"></script> -->
         <script src="./assets/Javascript/jquery.maskedinput.min.js" type="text/javascript"></script>
 </head>
-<body>
+<body style="background-color: #72D9E0;">
     <!-- navbar -->
     <nav class="navbar navbar-expand-md navbar-light">
   			<div class="header">
@@ -38,42 +38,51 @@
   	</nav>
 
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-  <div class= "header">
-    <p class="animated infinite bounce">Welcome</p>
-  </div>
-  <div class= "maincontent">
-    <h3>Your life, now organized</h3>
-      <ul>
-        <li>Improve personal organization and don't forget important things.</li>
-        <li>Remember birthdays and anniversaries.</li>
-        <li>Organize your everyday events and to-do things.</li>
-        <li>Intelligent estimation of events' periods and automatic postpone</li>
-        <li>Email Reports</li>
-      </ul>
-  </div>
-</div>
-</div>
-    <div class="row">
-        <form>
-            <div class='col-md-8' id='form'>
+		<div class="row">
+			<div class="col-md-6">
+				<div>
+				  <br>
+				  <p class="header animated infinite bounce" style='font-family: "Comic Sans MS", cursive, sans-serif'>Isn't it embaressing when you forget the birthday of a loved person!!!</p>
+				</div>
+				  <br>
+				<div class= "maincontent">
+				    <h3>Your life, now organized</h3>
+			        <ul>
+						<li>Improve personal organization and don't forget important events.</li>
+						<li>Remember birthdays and anniversaries.</li>
+						<li>Organize your everyday events and to-do things.</li>
+						<li>Intelligent estimation of events periods and automatic postpone.</li>
+						<li>Email Reports.</li>
+			        </ul>
+              <br>
+				</div>
+            </div>
+	        <div class="col-md-6">
+	       	  <img src="./assets/images/happybday.jpg" alt="cupcake" class="cupcake">
+	        </div>
+        </div>
+    </div>
 
-                <label>Name: <span><input type="text" id="name" placeholder="Name.."></span></label>
-                <!-- <input type="text" id="fname" name="firstname" placeholder="Your name.."> -->
-                <p>Email: <span><input type="text" id="email" placeholder="Email.."></span></p>
-                <!-- <input type="text" id="lname" name="lastname" placeholder="Your last name.."> -->
-                <p>DOB: <input type="text" id="date" placeholder="mm-dd"></p>
-                <input type="submit" value="Submit" id="submitBtn">
-            </div>
-            <div class="col-md-4">
-            </div>
+<div class="container">
+    <div class="row" id="form">
+		<form>
+		    <div class='col-md-6'>
+			    <p>Name: <span><input type="text" id="name" name="name" placeholder="Name.."></span></p>
+			    <!-- <input type="text" id="fname" name="firstname" placeholder="Your name.."> -->
+			    <p>Email: <span><input type="text" id="email" name="email" placeholder="Email.."></span></p>
+			    <!-- <input type="text" id="lname" name="lastname" placeholder="Your last name.."> -->
+	            <p>DOB: <input type="text" id="datepicker"></p>
+	            <input type="submit" value="Submit" id="submitBtn">
+        	</div>
+        	<div class="col-md-6">
+        	</div>
         </form>
     </div>
 </div>
 
-
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+
+
 <script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
 <script>
   // Initialize Firebase
@@ -86,7 +95,9 @@
     messagingSenderId: "572508190232"
   };
   firebase.initializeApp(config);
-    </script>
-    <script type="text/javascript" src="assets/Javascript/logic.js"></script>
+	</script>
+
+	<script type="text/javascript" src="assets/Javascript/logic.js"></script>
+
 </body>
 </html>
