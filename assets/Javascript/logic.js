@@ -52,7 +52,6 @@ database.ref().child("/User").once("value", function(snapshot) {
         $("<a class='calendarText'>").attr("href", "mailto:" + email + '?subject=' + subject + '&body=' + emailBody)
         );
       }
-
     })
   }
 })
