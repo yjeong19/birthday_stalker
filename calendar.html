@@ -95,7 +95,7 @@ function reload (){
    $('.fc-day').each(function() {
       date = $(this).data('date');
       $(this).val(date);
-			if ("2017-" + bday === date || "2018-" + bday === date) {
+			if ("2017-" + bday === date || "2018-" + bday === date || "2019-" + bday === date || "2020-" + bday === date) {
 				$(this).text("It is " + name + "'s birthday! Click to send message");
 				$(this).wrap(
 				$("<a class='calendarText'>").attr("href", "mailto:" + email + '?subject=' + subject + '&body=' + emailBody)
